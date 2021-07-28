@@ -15,12 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# build path for static
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-
-# build path for media
-MEDIA_DIR = os.path.join(BASE_DIR, 'media')
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -68,7 +62,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media',  # for media dir
             ],
         },
     },
@@ -120,12 +113,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+# url dir for static file
 STATIC_URL = '/static/'
 
-# Static files dir according to rango tutorial
-# Set the dirs for static files
-STATICFILES_DIRS = [STATIC_DIR, ]
-
-# set the url and dir for media
-MEDIA_ROOT = MEDIA_DIR
-MEDIA_URL = '/media/'
+# store dir for static file
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
