@@ -18,6 +18,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
+TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
+STATIC_DIR = os.path.join(BASE_DIR,'static')
+MEDIA_DIR = os.path.join(BASE_DIR,'media')
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '_yn0-$)*w!^ttipcm%tup^^ov8ri1)58a-69$pwt!h1hsv3zpn'
 
@@ -117,8 +121,10 @@ USE_TZ = True
 # url dir for static file
 STATIC_URL = '/static/'
 
+
+
 # store dir for static file
-STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
+STATICFILES_DIRS = [STATIC_DIR,]
 
 # url dir for media
 MEDIA_URL ='/media/'
