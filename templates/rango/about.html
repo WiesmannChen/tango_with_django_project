@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-{% load static %} <!-- not staticfiles but the static -->
+{% load static %}
 
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Rango</title>
+    <title>Title</title>
 </head>
 <body>
     <h1>Rango says...</h1>
@@ -14,10 +14,9 @@
         <strong>{{ boldmessage }}</strong><br/>
     </div>
     <div>
-        <a href="/rango/about">About</a><br/>
-        <img src="{% static 'images/rango.jpg' %}"
-             alt="Picture of Rango" />
-
+        <a href="/rango/">Index</a>
+        <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango"/>
+        <img src="{% static 'media/cat.jpg' %}" alt="Picture of cat"/>
     </div>
 
 </body>
