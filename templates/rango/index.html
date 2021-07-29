@@ -20,7 +20,7 @@
         <ul>
             {% for category in categories %}
                 <!-- The following line is used to add an HTML hyperlink-->
-                <a href="/rango/category/{{ category.slug }}">{{ category.name }}</a>
+                <li><a href="/rango/category/{{ category.slug }}">{{ category.name }}</a></li>
             {% endfor %}
         </ul>
     {% else %}
